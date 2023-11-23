@@ -100,3 +100,15 @@ function primeNumbers(number) {
 
 primeNumbers(a)
 
+
+
+//10.Write a program to find the maximum and minimum   elements in an array of integers.
+var a =[1,2,5,3,10,40,7]
+function maxAndMin(x) {
+
+   let array= x.sort((a,b) => a-b)
+    console.log("minimum Number is" ,array[0],"Maximum number is" , array[(array.length)-1]);
+   
+}
+
+maxAndMin(a)
