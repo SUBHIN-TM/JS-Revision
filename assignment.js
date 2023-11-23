@@ -152,15 +152,52 @@
 
 
 // 13.Write a function to check if a given number is an Armstrong number.
-var a= 153
-function Armstrong(a) {
- let k =a.toString().split("").map(Number) //converted to arrayb as numbers
-  k.map((data) => Math.pow(data,k.length)).reduce((total,value) => total + value ,0) === a ? console.log("armstrong Number"):console.log("not amstriong number");
-};
-Armstrong(a)
+// var a= 153
+// function Armstrong(a) {
+//  let k =a.toString().split("").map(Number) //converted to arrayb as numbers
+//   k.map((data) => Math.pow(data,k.length)).reduce((total,value) => total + value ,0) === a ? console.log("armstrong Number"):console.log("not amstriong number");
+// };
+// Armstrong(a)
 
 
 
+//14.A program to print the Fibonacci series
+var a = 10
+function Fibonacci(a) {
+  let fb =[0,1]
+  for(let i=2;i<a;i++){
+    fb[i]=fb[i-1] + fb[i-2]
+  }
+  console.log(fb);
+  
+}
+Fibonacci(a)
 
 
 
+//15.Write a program to find the sum of all prime numbers up to a given limit. 
+var a=5
+function primeNumbers(number) {
+  let result =[]
+   
+    for (let i =2 ; i <= number; i++){
+        let controller=true
+        for (let j = 2; j < i ; j++) {
+           
+            if(i % j == 0){
+                controller=false
+                break;
+            }
+        }
+        if(controller){
+           result.push(i)
+        }
+       
+    }
+    console.log(result.reduce((total,value) => total + value ,0));
+}
+
+primeNumbers(a)
+
+
+//16.Write a program to find the sum of all the multiples of 3 or 5 below a given number.
