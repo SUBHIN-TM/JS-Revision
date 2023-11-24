@@ -1,5 +1,5 @@
 var myFunction = (x) => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise((resolve, reject) => {
     try {
       console.log(
         "Hello",
@@ -33,18 +33,18 @@ myFunction("subhin")
     //HERE THIS CATCH WILL FIND THE PROMISE CHAIN ERRORS,promise reject content
     console.error(`error dueto promise function ${error}`);
   })(
-  // OR   METHOD 2
+    // OR   METHOD 2
 
-  async () => {
-    try {
-      console.log("writing inside aync function");
-      let result = await myFunction("subhin");
-      console.log(result);
-    } catch (error) {
-      console.error("due to", error);
+    async () => {
+      try {
+        console.log("writing inside aync function");
+        let result = await myFunction("subhin");
+        console.log(result);
+      } catch (error) {
+        console.error("due to", error);
+      }
     }
-  }
-)();
+  )();
 
 //OR METHOD 3
 
