@@ -171,27 +171,75 @@
 
 
 //16.Write a program to find the sum of all the multiples of 3 or 5 below a given number.
-function sumOfMultiples(n, limit) {
-  let sum =0;
-for (let i = 1; i <=limit; i++) {
-  i%n==0?sum += i:null;
-}
-return sum
-}
+// function sumOfMultiples(n, limit) {
+//   let sum =0;
+// for (let i = 1; i <=limit; i++) {
+//   i%n==0?sum += i:null;
+// }
+// return sum
+// }
 
-console.log(sumOfMultiples(3, 3));
+// console.log(sumOfMultiples(3, 3));
 
 
 //17.Write a program to find the sum of all the even or odd numbers below a given number.
-function sumOfOddOrEven(limit) {
-  let evenSum=0
-  let oddSum=0
-  for(let i=1;i<=limit;i++){
-    i%2===0? evenSum +=i:oddSum +=i
-  }
- return {evenSum,oddSum}
+// function sumOfOddOrEven(limit) {
+//   let evenSum=0
+//   let oddSum=0
+//   for(let i=1;i<=limit;i++){
+//     i%2===0? evenSum +=i:oddSum +=i
+//   }
+//  return {evenSum,oddSum}
+// }
+
+// let result= sumOfOddOrEven(5)
+// console.log(result);
+// console.log(`sum of even number is ${result.evenSum} \n sum of odd number is ${result.oddSum}`);
+
+// 18.Write a program to find the union of two arrays of integers.
+var a=[1,2,2,3,4]
+var b=[2,4,6]
+
+ function union(a,b) {
+  let result =[]
+  a.map((data) => {
+    b.map((value) => {
+      if(value===data){
+        if(!result.includes(value))
+        result.push(value)
+      }
+    })
+  })
+  return result
+ }
+
+console.log(union(a,b));
+
+//19.Write a program to find the sum of the digits of a given number.
+function sumOfDigits(number) {
+
+ return number.toString().split("").map(Number).reduce((total,data) => total + data ,0)
+  
 }
 
-let result= sumOfOddOrEven(5)
-console.log(result);
-console.log(`sum of even number is ${result.evenSum} \n sum of odd number is ${result.oddSum}`);
+console.log(sumOfDigits(1234));
+
+
+//20.Write a program to count the number of vowels in a given string.
+function vowels(a) {
+  let count =0;
+  let vowels =['a','e','i','o','u']
+  a.split("").map((data) => {
+    vowels.map((value) => {
+      if(value === data){
+         count++
+      }
+    })
+  })
+  return count
+  
+}
+
+var a ='aaaei'
+console.log(vowels(a));
+
