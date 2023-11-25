@@ -75,3 +75,78 @@ async function a() {
   console.log(c);
 }
 a();
+
+function sum(a,b) {
+ try {
+  return a + b
+
+ } catch (error) {
+  console.error(error);
+ }
+
+}
+
+let result =sum(10,10)
+console.log(result);
+
+function model (a,b){
+  return new Promise((resolve,reject) => {
+   try{
+    setTimeout(() => {
+      resolve(a+b)
+    },5000)
+
+   }catch(error){
+    console.error(error)
+    reject(error)
+   }
+
+  })
+
+}
+
+async function call (){
+  try {
+    let result = await model(10,20)
+    console.log(result);
+
+  } catch (error) {
+    console.error(error)
+  }
+}
+call()
+
+let hai = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    try {
+      resolve("collected");
+    } catch (error) {
+      reject(error);
+    }
+  }, 2000);
+});
+
+
+(async () => {
+  try {
+    let result = await hai;
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+})();
+
+
+//methord call
+async function h() {
+  try {
+   let result = await hai
+   console.log(result);
+
+  } catch (error) {
+    console.error(error);
+  }
+
+}
+
+h()
