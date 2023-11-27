@@ -60,8 +60,12 @@ async function calling() {
 
 calling();
 
-// ARAFFU Promise
 
+
+
+
+
+// ARAFFU Promise
 const p = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("ok");
@@ -76,6 +80,12 @@ async function a() {
 }
 a();
 
+
+
+
+
+
+//TRY NORMAL FUNCTION
 function sum(a,b) {
  try {
   return a + b
@@ -89,6 +99,15 @@ function sum(a,b) {
 let result =sum(10,10)
 console.log(result);
 
+
+
+
+
+
+
+
+
+//TRYS SUM PROMISE
 function model (a,b){
   return new Promise((resolve,reject) => {
    try{
@@ -116,6 +135,15 @@ async function call (){
 }
 call()
 
+
+
+
+
+
+
+
+
+//try another
 let hai = new Promise((resolve, reject) => {
   setTimeout(() => {
     try {
@@ -150,3 +178,33 @@ async function h() {
 }
 
 h()
+
+
+
+
+
+
+
+
+//try
+let k= new Promise((resolve,reject) => {
+  try{
+    resolve("got it")
+  }
+  catch(error){
+    reject(error)
+  }
+});
+
+(async function  trys(params) {
+  let result = await k
+  console.log(result);
+  
+})()
+
+
+
+
+
+
+

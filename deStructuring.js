@@ -38,3 +38,11 @@ console.log(g.fname);
 
 
 
+const sample = {names:'sudev',age:233}
+function prints(x) {
+    console.log(x.age);
+}
+prints(sample)
+
+
+
